@@ -69,6 +69,8 @@
                         </div>
                     {{ end }}
 
+                    {{ $iframe := $page.Params.iframe }}
+                    {{ partial "rawhtml.html" (dict "htmlContent" $iframe) }}
 
                     {{/* Main text content */}}
                     {{ if .Site.Params.features.heti }}<div class="context heti">{{ else }}<div class="context">{{ end }}
